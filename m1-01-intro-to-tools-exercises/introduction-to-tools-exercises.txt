@@ -29,7 +29,7 @@ actual command from other text in Unix documentation.
 2.  What does the ~ (tilde) character in the above command to change directory 
     refer to?
 ----
-
+The home directory.
 
 ----
 3.  A good habit to develop, especially while you're developing your skills on 
@@ -46,6 +46,7 @@ used the tilde when changing directories.  The tilde is a convenience to save
 you some typing.  The system resolves the tilde to the full location as it
 changes directory, and the "pwd" command reflects this.
 
+/Users/aahmed/development/ahmedahmed-java-blue-exercises/m1-01-intro-to-tools-exercises/java-helloworld
 
 ----
 4.  Display a list of all the files and folders in your present working 
@@ -56,6 +57,12 @@ changes directory, and the "pwd" command reflects this.
 $ ls -la
 <type or copy-paste the result here>
 
+drwxr-xr-x  6 aahmed  staff   192 Sep 17 16:07 .
+drwxr-xr-x  6 aahmed  staff   192 Sep 17 16:07 ..
+-rw-r--r--@ 1 aahmed  staff  6148 Sep 17 16:07 .DS_Store
+drwxr-xr-x  3 aahmed  staff    96 Sep 17 15:52 database
+-rw-r--r--  1 aahmed  staff  1091 Sep 17 15:52 pom.xml
+drwxr-xr-x  4 aahmed  staff   128 Sep 17 15:52 src
 
 ----
 5.  What do the "." and ".." folders displayed in the directory listing in
@@ -63,6 +70,8 @@ $ ls -la
 ----
 
 <type or copy-paste your answer here>
+. folder represents a current directory
+.. folder represents the parent directory
 
 ----
 6.  What are the names of the files, including any dot-files, displayed in the
@@ -70,6 +79,8 @@ $ ls -la
 ----
 
 <type or copy-paste your answer here>
+file names : .Ds_Store, pom.xml
+
 
 
 ----
@@ -79,6 +90,7 @@ $ ls -la
 
 <type or copy-paste your answer here>
 
+folder names: src, Database
 
 ----
 8.  pom.xml is a Maven build file. You will learn more about Maven in later 
@@ -108,6 +120,7 @@ Or
 $ less database/pagila.sql
 
 You are encouraged to make "less" part of your standard command line toolkit.
+
 
 
 ----
