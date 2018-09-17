@@ -18,7 +18,7 @@ clutter found in real projects.
     directory to the exercise folder.
 ----
 
-$ cd ~/workspace/exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld
+$ cd ~/Development/<your_name>-java-blue-exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld
 
 Note, do not enter the beginning "$" character. It represents the prompt for 
 the command line. This convention is commonly used to visually separate the 
@@ -234,7 +234,7 @@ $ cd ../../../../../
 
 or
 
-$ cd ~/workspace/exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld
+$ cd ~/Development/<your_name>-java-blue-exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld
 
 Note the first alternative relies upon the ".." parent folder notation.  In 
 essence it says to change directory from the current folder's parent's parent's
