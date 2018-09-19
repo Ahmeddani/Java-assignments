@@ -504,6 +504,23 @@ public class Exercises {
         Hint: Calculate the hourly rate for each painter, combine them, and then divide the total walls in feet by the combined hourly rate of the painters.
         Challenge: How many days will it take the pair to paint 623 rooms assuming they work 8 hours a day?.
         */
+                 int wallHeight = 12;
+                 int wallWidth = 14;
+                 int roomCircumference = 2 * (wallHeight + wallWidth);
+                 double billTime = 2.15;
+                 double jillTime = 1.90;
+                 double billHourlyRate = roomCircumference / billTime;
+                 double jillHourlyRate =  roomCircumference / jillTime;
+                 double combinedHourlyRate = billHourlyRate + jillHourlyRate;
+                 int WallsToBePainted = roomCircumference * 5;
+                 double timeTakenToPaintTogether = WallsToBePainted /  combinedHourlyRate;
+                 int totalRoomsTobePainted = 623;
+                 
+                 //divide the hour result by 8 to obtain number of days taken to paint
+                 double daysTakenforThePairToPaintTotalRooms = ((totalRoomsTobePainted * roomCircumference) / combinedHourlyRate) / 8;
+                 
+                 System.out.println(daysTakenforThePairToPaintTotalRooms);
+                 
 
         /*
         Create and assign variables to hold your first name, last name, and middle initial. Using concatenation,
@@ -512,6 +529,13 @@ public class Exercises {
         with a period.
         Example: "Hopper, Grace B." 
         */
+                 String firstName = "Ahmed";
+                 String lasttName = "Ahmed";
+                 String middleInitial = "N";
+                 String fullName = lasttName +", " + firstName + " " + middleInitial + ".";
+                 
+                 System.out.println(fullName);
+                 
 
         /*
         The distance between New York and Chicago is 800 miles, and the train has already travelled 537 miles. 
@@ -519,6 +543,12 @@ public class Exercises {
         Hint: The percent completed is the miles already travelled divided by the total miles.
         Challenge: Display as an integer value between 0 and 100 using casts.
         */
+                 int NewYorkToChicagoDistance = 800;
+                 int distanceTravelled = 537;
+                 int percentageOfTripCompleted = (int) ((double) distanceTravelled  / (double) NewYorkToChicagoDistance  * 100);
+                 
+                 System.out.println(percentageOfTripCompleted);
+                 
  
             
 	}
