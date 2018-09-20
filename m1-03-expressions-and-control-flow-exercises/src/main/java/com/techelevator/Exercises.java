@@ -502,12 +502,13 @@ public class Exercises {
 	 */
 	public boolean nearTen(int num) {
 		
-		if(((num + 1) % 10 == 0) || (((num - 1) % 10 == 0)) || (((num + 2) % 10 == 0)) || ((((num - 2) % 10 == 0)))) {
+		if(num % 10 < 3 || num % 10 >= 8) {
 			
 			return true;
 		}
 		
-		    return false;
+		return false;
+		
 	}
 
 	/*
@@ -567,19 +568,23 @@ public class Exercises {
 	public int teaParty(int tea, int candy) {
 		
 		//
-		
-			
-			
-		
-		 if((tea >= 5) && (candy >= 5)) {
-			
-			return 1;
-		}
-		 else if((tea >= candy * 2) || (candy >= tea * 2)) {
+		if(((tea >= 5) && (candy >= 5)) && ((tea >= (candy * 2)) || (candy >= (tea * 2)))) {
 			
 			return 2;
 		}
-		return 0;
+		if((tea >= 5) && (candy >= 5)) {
+			
+			return 1;
+		}
+		
+	    
+	    	
+	    	return 0;
+	    	
+	    
+			
+		
+		
 		
 	}
 
@@ -685,19 +690,38 @@ public class Exercises {
 	 */
 	public int luckySum(int a, int b, int c) {
 		
-		if(a == 13 && b == 13 && c == 13) {
-			return 0;
-		}
-		else if(a == 13) {
-			return c;
-		}
-		else if(b == 13) {
-			return a;
-		}
-		else {
-			return a + b;
-		}
+		 if (a == 13 && b == 13)
+			 
+			  {
+			 
+			     a = 0; b =0; c = 0; 
+			 
+			  }
+		 if(a == 13) {
+			 
+			 a = 0;
+			 b = 0;
+		 }
+			 
+		 if (b == 13)
+			 
+		     { 
+				   b=0; c=0; 
+				   
+	     	  }
+			 
+		 if (c == 13)
+			 
+			  { 
+				   c=0;
+				   
+			  }
+			 
+			   return a + b + c;
+			 
+			 }
+
 		
 	}
 
-}
+
