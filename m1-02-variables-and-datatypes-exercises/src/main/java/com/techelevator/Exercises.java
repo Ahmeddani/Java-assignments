@@ -545,6 +545,7 @@ public class Exercises {
         */
                  int NewYorkToChicagoDistance = 800;
                  int distanceTravelled = 537;
+                 //first convert the integer division to double division then explicitly casting double into integer
                  int percentageOfTripCompleted = (int) ((double) distanceTravelled  / (double) NewYorkToChicagoDistance  * 100);
                  
                  System.out.println(percentageOfTripCompleted);
