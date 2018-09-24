@@ -88,7 +88,7 @@ public class Exercises {
         */
                int numberOfBeaversWorking = 2;
                int numberOfBeaverLeft = 1;
-               int remainingBeaversWorking = numberOfBeaversWorking + numberOfBeaverLeft;
+               int remainingBeaversWorking = numberOfBeaversWorking - numberOfBeaverLeft;
                System.out.println(remainingBeaversWorking);
         /* 
         8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
@@ -104,7 +104,7 @@ public class Exercises {
         */
                 int numberOfSquirrels = 4;
                 int numberOfNuts = 2;
-                int numberOfExtraSquirrels = numberOfSquirrels + numberOfNuts;
+                int numberOfExtraSquirrels = numberOfSquirrels - numberOfNuts;
                 System.out.println(numberOfExtraSquirrels);
         /* 
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
@@ -113,7 +113,7 @@ public class Exercises {
                 int quarter = 25;
                 int dime = 10;
                 int nickels = 5;
-                int totalMoneyFound = quarter + dime + nickels;
+                int totalMoneyFound = quarter + dime + nickels + nickels;
                 System.out.println(totalMoneyFound);
         /* 
         11. Mrs. Hilt's favorite first grade classes are baking muffins. Mrs. Brier's
