@@ -16,6 +16,7 @@ public class Employee {
      * @param salary
      */
     public Employee(int employeeId, String firstName, String lastName, double salary) {
+    	this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.annualSalary = salary;

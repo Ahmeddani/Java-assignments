@@ -33,11 +33,12 @@ public class Television {
      */
     public void TurnOn()
     {
-        isOn = true;                        
+        isOn = true;  
+        this.currentVolume = 2;
     }
 
     /**
-     * Tuns the tv off. 
+     * Turns the tv off. 
      */
     public void TurnOff()
     {
@@ -50,10 +51,11 @@ public class Television {
      */
     public void ChangeChannel(int newChannel)
     {
-        if (isOn && newChannel > 3 && newChannel < 18)
+        if (isOn && (newChannel > 3 && newChannel < 18))
         {
-            selectedChannel = newChannel;
+            this.selectedChannel = newChannel;
         }
+        
     }
 
     /**
@@ -61,15 +63,21 @@ public class Television {
      */
     public void RaiseVolume()
     {
-        currentVolume++;
+    	if(this.currentVolume <= 10 && isOn) {
+    		currentVolume++;
+    	}
+    		
     }
 
     /**
      * Lowers the volume. It won't lower it below 0 and the tv has to be on 
      */
-    public void LowerVolume()
-    {
-        currentVolume--;
+	public void LowerVolume() {
+		if (isOn && currentVolume >= 0) {
+			currentVolume--;
+		} 
+			
+		}
     }
 
-}
+
