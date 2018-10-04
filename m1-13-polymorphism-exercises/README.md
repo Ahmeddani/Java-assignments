@@ -66,12 +66,12 @@ What distance will it be traveling to? 340
 Delivery Method                 $ cost
 --------------------------------------
 Postal Service (1st Class)      $15.98
-Postal Service (2nd Class)      $1.65
-Postal Service (3rd Class)      $0.84
+Postal Service (2nd Class)      $1.60
+Postal Service (3rd Class)      $0.82
 FexEd                           $20.00
-SPU (4-day ground)              $1.75
-SPU (2-day business)            $17.50
-SPU (next-day)                  $26.25
+SPU (4-day ground)              $1.59
+SPU (2-day business)            $15.94
+SPU (next-day)                  $23.91
 ```
 
 
