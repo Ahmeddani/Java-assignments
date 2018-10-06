@@ -1,4 +1,4 @@
-package com.techelevator;
+package com.techelevator.postage;
 
 public class SPU implements DeliveryDriver{
 
@@ -12,11 +12,11 @@ public class SPU implements DeliveryDriver{
 	public double CalculateRate(int distance, double weight) {
 		
 		double rate = 0.00;
-		if (this.spuClass == "4") {
+		if (this.spuClass == "4-day") {
 			rate = (weight * 0.0050) * distance;
 		}
 		
-		if (this.spuClass == "2") {
+		if (this.spuClass == "2-day") {
 			rate = (weight * 0.050) * distance;
 		}
 		
@@ -26,5 +26,9 @@ public class SPU implements DeliveryDriver{
 		return rate;
 	}
 
+	@Override
+	public String toString() {
+		return "SPU " + "("+spuClass+")             ";
+	}
 	
 }

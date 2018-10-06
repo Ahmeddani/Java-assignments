@@ -2,6 +2,8 @@ package com.techelevator;
 
 import org.junit.Test;
 
+import com.techelevator.postage.PostalService;
+
 import org.junit.Assert;
 
 public class PostalServicesTest {

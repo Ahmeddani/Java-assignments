@@ -1,4 +1,4 @@
-package com.techelevator;
+package com.techelevator.postage;
 
 public class PostalService implements DeliveryDriver{
 
@@ -97,5 +97,10 @@ public class PostalService implements DeliveryDriver{
 		
 	}
        return rate;
+	}
+	
+	@Override
+	public String toString() {
+		return "Postal Service "+ deliveryClass + " - Class";
 	}
 }

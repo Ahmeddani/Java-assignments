@@ -3,6 +3,8 @@ package com.techelevator;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.techelevator.postage.SPU;
+
 public class SPUTest {
 
 	SPU spu = new SPU("4");

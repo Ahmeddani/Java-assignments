@@ -26,8 +26,10 @@ public class Truck implements Vehicle{
 			
 			toll = 0.048 * distance;
 		    return toll;
-		
-
+	
 	}
-
+	@Override
+ public String toString() {
+		return null; 
+	}
 }

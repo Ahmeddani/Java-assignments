@@ -17,6 +17,7 @@ public class Main {
 		cars.add(new Truck(4));
 		cars.add(new Tank());
 		
+		System.out.println("----------------------------------------");
 		System.out.println("Vehicle    Distance Travelled   Toll $");
 		System.out.println("----------------------------------------");
 		
@@ -24,7 +25,8 @@ public class Main {
 			int distance = rand.nextInt((230) + 10);
 			totalDistanceTravelled += distance;
 			totalToll += car.CalculateToll(distance);
-			System.out.format(car.getClass().getSimpleName() + "\t\t" + distance + "\t\t" + car.CalculateToll(distance));
+			System.out.printf(car.getClass().getSimpleName() + "\t\t" + distance + "\t\t" + "%.2f", car.CalculateToll(distance));
+			System.out.println();
 			}
 		
 		System.out.println("----------------------------------------");

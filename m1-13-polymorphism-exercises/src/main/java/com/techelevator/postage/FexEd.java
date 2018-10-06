@@ -1,4 +1,4 @@
-package com.techelevator;
+package com.techelevator.postage;
 
 public class FexEd implements DeliveryDriver{
 
@@ -19,5 +19,8 @@ public class FexEd implements DeliveryDriver{
 		return rate;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "FexEd                      ";
+	}
 }

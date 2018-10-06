@@ -3,6 +3,8 @@ package com.techelevator;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.techelevator.postage.FexEd;
+
 public class FexEdTest {
 
 	FexEd fx = new FexEd();
