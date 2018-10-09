@@ -68,7 +68,7 @@ public class KataFizzBuzzTest {
 		assertEquals("Fizz", fizzBuzz.getFizzBuzz(72));
 	}
 	@Test
-	public void only_if_multiple_of_5_return_fizz() {
+	public void only_if_multiple_of_5_return_Buzz() {
 		assertEquals("Buzz", fizzBuzz.getFizzBuzz(10));
 		assertEquals("Buzz", fizzBuzz.getFizzBuzz(40));
 		assertEquals("Buzz", fizzBuzz.getFizzBuzz(70));
