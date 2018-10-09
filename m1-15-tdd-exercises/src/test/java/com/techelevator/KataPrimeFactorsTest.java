@@ -19,7 +19,7 @@ public void setup() {
 @Test
 public void test_for_zero() {
 	List<Integer> primeFactors = pf.factorize(0);
-	Assert.assertEquals([0], primeFactors);
+	Assert.assertEquals(0, primeFactors);;
 	
 }
 }
