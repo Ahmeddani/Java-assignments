@@ -12,7 +12,16 @@ public class Exercises {
     arrayDeduplication([1, 1, 1]) → [1]
     */
     public int[] arrayDeduplication(int[] nums) {
-        return null;
+    	int[] arrayWithOutDuplicates = new int[nums.length];
+    	for (int i = 0; i < nums.length; i++) {
+    		for (int j = i + 1; j < nums.length; j++) {
+    			if (nums[i] != nums[j]) {
+    				arrayWithOutDuplicates[i] = nums[i];
+    			}
+    		}
+    		
+    	}
+        return arrayWithOutDuplicates;
     }
     
     /*

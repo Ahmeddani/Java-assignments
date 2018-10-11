@@ -22,6 +22,7 @@ public class KataRomanNumeralsTest {
 
 }
 
+//test cases for arabic to numeral
 @Test
 public void test_for_less_than_or_equal_to_zero() {
 	
@@ -70,6 +71,8 @@ public void test_for_900() {
 	Assert.assertEquals("IX", roman);
 }
 
+
+//---test cases for roman to arabic numerals------
 @Test
 public void test_for_I() {
 	int arabic = romanNumerals.romanToArabic("I");

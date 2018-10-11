@@ -41,9 +41,9 @@ public class FileSplitter {
 
 					}
 
-					bw.flush();
+					
 				}
-
+				bw.flush();
 			}
 
 		}

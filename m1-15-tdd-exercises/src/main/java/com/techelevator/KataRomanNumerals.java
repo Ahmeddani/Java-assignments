@@ -53,6 +53,8 @@ public class KataRomanNumerals {
 	    return asRomanNumerals;
 }
  
+ // method to convert roman numerals to arabic numerals.
+ 
  public int romanToArabic(String roman) {
 	 
 	 int current = 0; // current position in the roman numeral
