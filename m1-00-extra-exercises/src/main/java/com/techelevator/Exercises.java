@@ -1,5 +1,6 @@
 package com.techelevator;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -11,18 +12,33 @@ public class Exercises {
     arrayDeduplication([]) → []        
     arrayDeduplication([1, 1, 1]) → [1]
     */
-    public int[] arrayDeduplication(int[] nums) {
-    	int[] arrayWithOutDuplicates = new int[nums.length];
-    	for (int i = 0; i < nums.length; i++) {
-    		for (int j = i + 1; j < nums.length; j++) {
-    			if (nums[i] != nums[j]) {
-    				arrayWithOutDuplicates[i] = nums[i];
-    			}
-    		}
-    		
-    	}
-        return arrayWithOutDuplicates;
-    }
+	public int[] arrayDeduplication(int[] nums) {
+		List<Integer> listWithOutDuplicates = new ArrayList<Integer>();
+
+		for (int i = 0; i < nums.length; i++) {
+
+			listWithOutDuplicates.add(nums[i]);
+
+		}
+
+		for (int i = 0; i < listWithOutDuplicates.size(); i++) {
+			for (int j = i + 1; j < listWithOutDuplicates.size(); j++) {
+				if (listWithOutDuplicates.get(i) == listWithOutDuplicates.get(j)) {
+					listWithOutDuplicates.remove(i);
+				}
+			}
+
+		}
+		int[] arrayWithOutDuplicates = new int[listWithOutDuplicates.size()];
+
+		for (int i = 0; i < listWithOutDuplicates.size(); i++) {
+
+			arrayWithOutDuplicates[i] = listWithOutDuplicates.get(i);
+		}
+
+		return arrayWithOutDuplicates;
+
+	}
     
     /*
     CHALLENGE: Using array A and array B, return an array that is the intersection of both A and B.
