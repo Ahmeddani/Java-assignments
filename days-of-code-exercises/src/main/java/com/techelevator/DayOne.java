@@ -12,4 +12,20 @@ public class DayOne {
 			return nums;
 		}
              
+	public boolean has12(int[] nums) {
+		int temp1 = 0;
+		int temp2 = 0;
+		for(int i = 0; i < nums.length; i++) {
+			if (nums[i] == 1) {
+			    temp1 = i;
+			}
+			if(nums[i]== 2) {
+				temp2 = i;
+			}
+			if(temp1 < temp2) {
+				return true;
+			}
+		}
+		return false;
+	}
 }

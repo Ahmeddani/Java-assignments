@@ -1,5 +1,6 @@
 package com.techelevator.projects.model;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 public class Employee {
@@ -38,8 +39,8 @@ public class Employee {
 	public LocalDate getBirthDay() {
 		return birthDay;
 	}
-	public void setBirthDay(LocalDate birthDay) {
-		this.birthDay = birthDay;
+	public void setBirthDay(LocalDate date) {
+		this.birthDay = date;
 	}
 	public char getGender() {
 		return gender;
