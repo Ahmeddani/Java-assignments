@@ -14,7 +14,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.SingleConnectionDataSource;
+
+import com.techelevator.projects.model.Department;
+import com.techelevator.projects.model.DepartmentDAO;
 import com.techelevator.projects.model.Employee;
+import com.techelevator.projects.model.jdbc.JDBCDepartmentDAO;
 import com.techelevator.projects.model.jdbc.JDBCEmployeeDAO;
 
 public class JDBCEmployeeDAOTest {
@@ -24,7 +28,7 @@ private JDBCEmployeeDAO employeeDAO;
 private JdbcTemplate jdbcTemplate;
 
 private static final Long EMPLOYEE_ID = 13L;
-
+private static final Long DEPARTMENT_ID = 1L;
 @BeforeClass
 public static void setupDataSource() {
 	dataSource = new SingleConnectionDataSource();
@@ -44,8 +48,8 @@ public void setup() {
 	employeeDAO = new JDBCEmployeeDAO(dataSource);
 	jdbcTemplate = new JdbcTemplate(dataSource);
 	String insertSql = "insert into employee (employee_id, department_id, first_name, last_name, birth_date,gender,hire_date)"
-			+ " values (?, 1, 'Ahmed', 'Nur', DATE '1990-12-28', 'F', DATE '2011-08-01')";
-	jdbcTemplate.update(insertSql, EMPLOYEE_ID);
+			+ " values (?, ?, 'Ahmed', 'Nur', DATE '1990-12-28', 'F', DATE '2011-08-01')";
+	jdbcTemplate.update(insertSql, EMPLOYEE_ID, DEPARTMENT_ID);
 }
 
 @After
@@ -62,7 +66,7 @@ public void get_all_employees() {
 
 @Test
 public void search_employees_by_name() {
-	Employee employeeExpected = getEmployee(EMPLOYEE_ID, 1L, "Ahmed", "Nur", (LocalDate.of(1990,12,28)), 'F', (LocalDate.of(2011,8,01)));
+	Employee employeeExpected = getEmployee(EMPLOYEE_ID, DEPARTMENT_ID, "Ahmed", "Nur", (LocalDate.of(1990,12,28)), 'F', (LocalDate.of(2011,8,01)));
 	List<Employee> employeeList = employeeDAO.searchEmployeesByName("ahmeD", "nUr");
 	Assert.assertTrue(employeeList.size() > 0);
 	Employee employeeActual = new Employee();
@@ -73,14 +77,20 @@ public void search_employees_by_name() {
 
 @Test
 public void get_employees_by_department_id() {
-	List<Employee> employeeList = employeeDAO.getEmployeesByDepartmentId(1L);
+	Employee employeeExpected = getEmployee(EMPLOYEE_ID, DEPARTMENT_ID, "Ahmed", "Nur", (LocalDate.of(1990,12,28)), 'F', (LocalDate.of(2011,8,01)));
+	List<Employee> employeeList = employeeDAO.getEmployeesByDepartmentId(DEPARTMENT_ID);
 	Assert.assertTrue(employeeList.size() > 0);
+	for (Employee employee : employeeList) {
+		if(employee.getId() == EMPLOYEE_ID) {
+			Assert.assertTrue(true);
+		}
+	}
 }
 
 @Test
 public void get_employees_with_out_projects() {
 	Employee employee = new Employee();
-	Employee employeeExpected = getEmployee(EMPLOYEE_ID, 1L, "Ahmed", "Nur", (LocalDate.of(1990,12,28)), 'F', (LocalDate.of(2011,8,01)));
+	Employee employeeExpected = getEmployee(EMPLOYEE_ID, DEPARTMENT_ID, "Ahmed", "Nur", (LocalDate.of(1990,12,28)), 'F', (LocalDate.of(2011,8,01)));
 	List<Employee> employeeList = employeeDAO.getEmployeesWithoutProjects();
 	Assert.assertTrue(employeeList.size() > 0);
 	for (Employee emp : employeeList) {
