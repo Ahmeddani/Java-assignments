@@ -1,0 +1,16 @@
+html{
+font: 96px Courier;
+}
+
+.even{
+background-color: blue;
+}
+
+.odd{
+background-color: deeppink;
+}
+.layer{
+    display: flex;
+    justify-content: center;
+}
+

@@ -1,0 +1,22 @@
+html{
+font: 96px Courier;
+}
+
+.even{
+background-color: blue;
+}
+
+.odd{
+background-color:deeppink;
+}
+
+.box{
+border:5px;
+display: inline;
+width: 70px;
+}
+
+
+.layer{
+    display: inline;
+}

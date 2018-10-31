@@ -1,0 +1,36 @@
+html{
+font: 96px Courier;
+}
+
+.even{
+background-color: blue
+}
+
+.odd{
+background-color: deeppink
+}
+
+.box{
+border:5px;
+display: flex;
+width: 70px;
+}
+#box_1, #box_8{
+    position: relative;
+    left: 70px; 
+}
+
+#box_2, #box_7{
+    position: relative;
+    left: 140px; 
+}
+
+#box_3, #box_6{
+    position: relative;
+    left: 210px; 
+}
+
+#box_4, #box_5{
+    position: relative;
+    left: 280px; 
+}
