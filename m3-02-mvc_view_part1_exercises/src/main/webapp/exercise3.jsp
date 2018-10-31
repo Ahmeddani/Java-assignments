@@ -14,6 +14,15 @@
 		<h1>Exercise 3 - Echo</h1>
 		
 		<ul>
+		<c:forEach var = "count" begin = "0" end = "${param.count}">
+		
+		  <li style = "font-size: ${param.count - count}px"> ${param.word}</li>
+		   
+		
+		</c:forEach>
+		
+		
+		
 		<%--
 			Given two query string parameters, "word" and "count":
 			

@@ -1,0 +1,15 @@
+html {
+  font: 96px Courier;
+}
+
+.even{
+  background-color: blue
+}
+
+.odd{
+  color: deeppink
+}
+
+.box_0{
+  border:5px;
+}
