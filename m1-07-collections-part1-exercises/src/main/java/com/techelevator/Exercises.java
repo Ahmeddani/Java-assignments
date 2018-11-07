@@ -1,6 +1,7 @@
 package com.techelevator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -22,6 +23,7 @@ public class Exercises {
 	 array2List( {"Left", "Right", "Forward", "Back"} )  ->  ["Left", "Right", "Forward", "Back"] 
 	 */
 	public List<String> array2List(String[] stringArray) {
+<<<<<<< HEAD
 		
 		List<String> stringList  = new ArrayList<String>();
 		
@@ -30,6 +32,16 @@ public class Exercises {
 			stringList.add(stringArray[i]);
 		}
 		return stringList;
+=======
+		List<String> listItems = new ArrayList<String>();
+		
+		for (String item : stringArray) {
+			listItems.add(item);
+		}
+		
+		
+		return listItems;
+>>>>>>> f224f1587b4e5a69363b4be9bd346f2b8264412b
 	}
 	
 	/*
@@ -189,7 +201,7 @@ public class Exercises {
     ** INTERVIEW QUESTION **	 
     
     fizzBuzzList( {1, 2, 3} )  ->  [1, 2, "Fizz"]
-	 fizzBuzzList( {4, 5, 6} )  ->  [4, "Buzz", 6]
+	 fizzBuzzList( {4, 5, 6} )  ->  [4, "Buzz", "Fizz"]
 	 fizzBuzzList( {7, 8, 9, 10, 11, 12, 13, 14, 15} )  ->  [7, 8, "Fizz", "Buzz", 11, "Fizz", 13, 14, "FizzBuzz"]
 	 
 	 HINT: To convert an integer x to a string you can call x.toString() in your code (e.g. if x = 1 then x.ToString() equals "1")
@@ -275,6 +287,7 @@ public class Exercises {
 	 */
 	public List<Integer> boardingGate(List<Integer> seatNumberList) {
 		
+<<<<<<< HEAD
 		Queue<Integer> int110 = new LinkedList<Integer>();
 		Queue<Integer> int1120 = new LinkedList<Integer>();
 		Queue<Integer> int2130 = new LinkedList<Integer>();
@@ -304,6 +317,40 @@ public class Exercises {
 		boardingGateList.addAll(int1120);
 		boardingGateList.addAll(int2130);
 		return boardingGateList;
+=======
+		Queue<Integer> one = new LinkedList<Integer>();
+		Queue<Integer> two = new LinkedList<Integer>();
+		Queue<Integer> three = new LinkedList<Integer>();
+		
+		List<Integer> retList = new ArrayList<Integer>();
+		
+		for (Integer seat : seatNumberList) {
+			if (seat > 0 && seat <= 10) {
+				one.add(seat);
+			} 
+			if (seat > 10 && seat <= 20) {
+				two.add(seat);
+			} 
+			if (seat > 20 && seat <= 30) {
+				three.add(seat);
+			}
+		}
+		
+		while (!one.isEmpty()) {
+			retList.add(one.poll());
+		}
+		
+		while (!two.isEmpty()) {
+			retList.add(two.poll());
+		}
+		
+		while (!three.isEmpty()) {
+			retList.add(three.poll());
+		}
+		
+		
+		return retList;
+>>>>>>> f224f1587b4e5a69363b4be9bd346f2b8264412b
 	}
 
 }

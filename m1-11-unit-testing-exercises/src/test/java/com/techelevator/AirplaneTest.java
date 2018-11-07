@@ -1,5 +1,6 @@
 package com.techelevator;
 
+<<<<<<< HEAD
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -55,3 +56,8 @@ public class AirplaneTest {
 		airplane = null;
 	}
 }
+=======
+public class AirplaneTest {
+
+}
+>>>>>>> f224f1587b4e5a69363b4be9bd346f2b8264412b

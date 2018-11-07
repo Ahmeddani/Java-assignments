@@ -6,7 +6,6 @@ public class Elevator {
     private int currentLevel;
     private int numberOfLevels;
     private boolean doorOpen = true;
-    private boolean moving;
 
     /**
      * Creates a new elevator 
@@ -17,7 +16,7 @@ public class Elevator {
         this.shaftNumber = shaftNumber;
         this.numberOfLevels = totalNumberOfFloors;
         this.currentLevel = 1;
-    }
+    } 
 
     /**
      * Elevator Shaft Number 
@@ -51,23 +50,14 @@ public class Elevator {
         return doorOpen;
     }
 
-    /**
-     * Is elevator door moving 
-     * @return moving
-     */
-    public boolean isMoving() {
-        return moving;
-    }
+ 
 
     /**
      * Opens the elevator door, as long as it is not moving 
      */
     public void OpenDoor()
-    {
-        if (!moving)
-        {
-            doorOpen = true;
-        }
+    { 
+    	doorOpen = true;
     }
 
     /**
@@ -75,10 +65,14 @@ public class Elevator {
      */
     public void CloseDoor()
     {
+<<<<<<< HEAD
         if (!moving)
         {
             doorOpen = false;
         }
+=======
+    	doorOpen = false;
+>>>>>>> f224f1587b4e5a69363b4be9bd346f2b8264412b
     }
 
     /**

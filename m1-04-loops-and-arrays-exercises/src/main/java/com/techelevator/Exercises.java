@@ -10,9 +10,13 @@ public class Exercises {
 	 firstLast6([13, 6, 1, 2, 3]) → false
 	 */
 	public boolean firstLast6(int[] nums) {
+<<<<<<< HEAD
 		
 		if(nums[0] == 6 || nums[nums.length - 1] == 6) {
 			
+=======
+		if (nums[0] == 6 || nums[nums.length - 1] == 6) {
+>>>>>>> f224f1587b4e5a69363b4be9bd346f2b8264412b
 			return true;
 		}
 		return false;
@@ -39,7 +43,11 @@ public class Exercises {
 	 makePi() → [3, 1, 4]
 	 */
 	public int[] makePi() {
+<<<<<<< HEAD
 		return new int[]{3,1,4};
+=======
+		return new int[] {3, 1, 4};
+>>>>>>> f224f1587b4e5a69363b4be9bd346f2b8264412b
 	}
 
 	/*

@@ -9,8 +9,11 @@ public class Exercises {
 	 helloName("X") → "Hello X!"
 	 */
 	public String helloName(String name) {
+<<<<<<< HEAD
 		
 		
+=======
+>>>>>>> f224f1587b4e5a69363b4be9bd346f2b8264412b
 		return "Hello " + name + "!";
 	}
 
@@ -22,7 +25,12 @@ public class Exercises {
 	 makeAbba("What", "Up") → "WhatUpUpWhat"
 	 */
 	public String makeAbba(String a, String b) {
+<<<<<<< HEAD
 		return a + b + b + a;
+=======
+		String c = a + b + b + a;
+		return c;
+>>>>>>> f224f1587b4e5a69363b4be9bd346f2b8264412b
 	}
 
 	/*
@@ -57,12 +65,18 @@ public class Exercises {
 	 extraEnd("Hi") → "HiHiHi"
 	 */
 	public String extraEnd(String str) {
+<<<<<<< HEAD
 	
 		String lastTwoChars = str.substring((str.length() - 2));
 		
 		
 		
 		return lastTwoChars + lastTwoChars + lastTwoChars;
+=======
+		String end = str.substring(str.length() - 2);
+		String combinedStr = end + end + end;
+		return combinedStr;
+>>>>>>> f224f1587b4e5a69363b4be9bd346f2b8264412b
 	}
 
 	/*

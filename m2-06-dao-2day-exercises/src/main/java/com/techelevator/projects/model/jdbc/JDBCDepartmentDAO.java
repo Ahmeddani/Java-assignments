@@ -22,6 +22,7 @@ public class JDBCDepartmentDAO implements DepartmentDAO {
 
 	@Override
 	public List<Department> getAllDepartments() {
+<<<<<<< HEAD
 		List<Department> departments = new ArrayList<Department>();
 		
 		String selectDepartments = "select department_id, name from department";
@@ -32,6 +33,20 @@ public class JDBCDepartmentDAO implements DepartmentDAO {
 			Department department = mapDepartmentToRows(results);
 			departments.add(department);
 		}
+=======
+		
+		List<Department> departments = new ArrayList<Department>();
+		
+		String sql = "Select department_id, name FROM department";
+		
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
+		
+		while (results.next()) {
+			Department department = mapRowToDepartment(results);
+			departments.add(department);
+		}
+		
+>>>>>>> f224f1587b4e5a69363b4be9bd346f2b8264412b
 		return departments;
 	}
 
@@ -92,6 +107,7 @@ public class JDBCDepartmentDAO implements DepartmentDAO {
 		return department;
 	}
 	
+<<<<<<< HEAD
 	private Long getNextDepartmentId() {
 	
 			SqlRowSet nextIdResult = jdbcTemplate.queryForRowSet("SELECT nextval('seq_department_id')");
@@ -101,6 +117,14 @@ public class JDBCDepartmentDAO implements DepartmentDAO {
 				throw new RuntimeException("Something went wrong while getting an id for the new department");
 			}
 		}
+=======
+	private Department mapRowToDepartment(SqlRowSet result) {
+		Department department = new Department();
+		department.setId(result.getLong("department_id"));
+		department.setName(result.getString("name"));
+		return department;
+	}
+>>>>>>> f224f1587b4e5a69363b4be9bd346f2b8264412b
 
 }
 

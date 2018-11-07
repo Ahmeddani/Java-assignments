@@ -1,5 +1,6 @@
 package com.techelevator;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -39,6 +40,7 @@ public class Exercises {
 	 */
 	public String animalGroupName(String animalName) {
 		
+<<<<<<< HEAD
 		Map<String,String> animalGroup = new HashMap<String, String>();
 		animalGroup.put("rhino", "Crash");
 		animalGroup.put("giraffe", "Tower");
@@ -57,6 +59,29 @@ public class Exercises {
 		}
 		
 		return "unknown";
+=======
+		Map<String, String> animalGroupNames = new HashMap<String, String>();
+		animalGroupNames.put("RHINO", "Crash");
+		animalGroupNames.put("GIRAFFE", "Tower");
+		animalGroupNames.put("ELEPHANT", "Herd");
+		animalGroupNames.put("LION", "Pride");
+		animalGroupNames.put("CROW", "Murder");
+		animalGroupNames.put("PIGEON", "Kit");
+		animalGroupNames.put("FLAMINGO", "Pat");
+		animalGroupNames.put("DEER", "Herd");
+		animalGroupNames.put("DOG", "Pack");
+		animalGroupNames.put("CROCODILE", "Float");
+		
+		if (animalName == null 
+				|| animalName.equals("") 
+				|| !animalGroupNames.containsKey(animalName.toUpperCase())) {
+			return "unknown";
+		}
+		
+		
+		return animalGroupNames.get(animalName.toUpperCase());
+		
+>>>>>>> f224f1587b4e5a69363b4be9bd346f2b8264412b
 	}
 	
 
