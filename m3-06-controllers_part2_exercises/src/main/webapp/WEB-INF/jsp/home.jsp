@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import = "javax.servlet.*,java.text.*" %>
 <c:import url="/WEB-INF/jsp/common/header.jsp"/>
 
 <section>
@@ -17,9 +18,9 @@
 <div class = "column" style = "padding-left:20px">
 </c:otherwise>	
 </c:choose>
-<b><c:out value = "${review.title}"/></b><br>
-by <c:out value = "${review.username}"/> on ${review.dateSubmitted}<br><br>
-<c:out value = "${review.text}"/> <br>
+<b><c:out value = "**${review.title}**  (${review.username})"/></b><br>
+${review.formattedDate}
+<br>
 <c:choose>
        				<c:when test="${review.rating > 4.5 }">
        					<c:set var="starRating" value="img/5-star.png" />
@@ -38,6 +39,8 @@ by <c:out value = "${review.username}"/> on ${review.dateSubmitted}<br><br>
        				</c:when>
        			</c:choose>
        			<img src="${starRating }" style="width:10vw" />
+       			<br><br>
+       			<c:out value = "${review.text}"/> <br>
 </div>
 <br>
 

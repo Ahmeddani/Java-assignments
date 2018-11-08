@@ -10,7 +10,7 @@
     
 <div class="d-flex flex-row">
   <div class="p-2"><img src = "img/${product.imageName}"/></div>
-  <div class="p-2" style = "text-align: left">
+  <div class="p-2" style = "text-align: left;display:inline">
     <div>
   	<h3>${product.name}</h3>
       <h4>by ${product.manufacturer}</h4>

@@ -12,7 +12,7 @@
 <label for = "title">Title: </label>
 <input type= "text" id = "title" name = "title"/>
 	<br><br>
-<label for = "text">Message: </label>
+<label for = "text">Text: </label>
 <input type= "text" id = "text" name = "text"/>
 	<br><br>
 <label for = "rating"> Rating: </label>

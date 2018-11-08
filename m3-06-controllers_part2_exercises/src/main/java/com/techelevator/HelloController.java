@@ -1,12 +1,14 @@
 package com.techelevator;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,13 +37,13 @@ public class HelloController {
 	}
 	
 	@RequestMapping(path="/reviewOutput", method=RequestMethod.POST)
-	public String addNewCityByPostWithModelMap(Review newReview, ModelMap map) {
+	public String addNewCityByPostWithModelMap(Review newReview, @DateTimeFormat(pattern="MM/dd/yyyy")@RequestParam LocalDateTime date, ModelMap map) {
 	    
 //		map.addAttribute("methodUsed", "POST-REDIRECT-GET");
-		LocalDateTime date = LocalDateTime.now();
+//		LocalDateTime date = LocalDateTime.now();
 		
 		
-		newReview.setDateSubmitted(date);
+		newReview.setDateSubmitted(date.now());
 		reviewDao.save(newReview);
 	
 		

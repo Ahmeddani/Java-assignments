@@ -1,6 +1,8 @@
 package com.techelevator.model;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Formatter;
 
 public class Review {
 	private Long id;
@@ -10,6 +12,7 @@ public class Review {
 	private String text;
 	private LocalDateTime dateSubmitted;
 	
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
 	public Long getId() {
 		return id;
 	}
@@ -45,5 +48,9 @@ public class Review {
 	}
 	public void setDateSubmitted(LocalDateTime dateSubmitted) {
 		this.dateSubmitted = dateSubmitted;
+	}
+	
+	public String getFormattedDate() {
+		return this.dateSubmitted.format(formatter);
 	}
 }
