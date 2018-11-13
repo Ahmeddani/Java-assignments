@@ -13,7 +13,7 @@
 					<form:input path="email" /> 
 					<form:errors path = "email" cssClass="error"/>
 					<label for="password">Password</label>
-					 <form:input path ="password"/> 
+					 <form:input path ="password" type = "password"/> 
 					<form:errors path = "password" cssClass="error"/>
 					<br><br>
 					<input type="submit"  value="Login">

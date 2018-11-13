@@ -28,12 +28,12 @@
 					<form:errors path = "confirmEmail" cssClass="error"/>
 				  
 				  <label for="password">Password</label>
-					<form:input path="password" /> 
+					<form:input path="password" type = "password"/> 
 					<form:errors path = "password" cssClass="error"/>
 					<form:errors path = "passwordMatching" cssClass="error"/>
 				  
 				  <label for="confirmPassword">Confirm Password</label>
-					<form:input path="confirmPassword" /> 
+					<form:input path="confirmPassword" type = "password"/> 
 					<form:errors path = "confirmPassword" cssClass="error"/>
 					
 				  <label for="birthDate">Date of Birth</label>
