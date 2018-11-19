@@ -1,7 +1,6 @@
 package com.techelevator;
 
-import org.junit.Before;
-
+\
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -54,7 +53,7 @@ public class FruitTreeTest {
 	@Test
 	public void pick_negative_fruit() {
 	Assert.assertTrue(fruitTree.PickFruit(-1));
-	Assert.assertEquals(1, fruitTree.getPiecesOfFruitLeft());
+	Assert.assertEquals(20, fruitTree.getPiecesOfFruitLeft());
 	}
 	
 }

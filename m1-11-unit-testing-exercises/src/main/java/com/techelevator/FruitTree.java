@@ -15,7 +15,7 @@ public class FruitTree {
         this.typeOfFruit = typeOfFruit;
     }
 
-    /**
+    /** 
      * Type of fruit on the tree 
      * @return typeOfFruit
      */

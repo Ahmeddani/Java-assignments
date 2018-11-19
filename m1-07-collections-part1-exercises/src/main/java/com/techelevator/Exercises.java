@@ -1,6 +1,7 @@
 package com.techelevator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -22,7 +23,14 @@ public class Exercises {
 	 array2List( {"Left", "Right", "Forward", "Back"} )  ->  ["Left", "Right", "Forward", "Back"] 
 	 */
 	public List<String> array2List(String[] stringArray) {
-		return null;
+		List<String> listItems = new ArrayList<String>();
+		
+		for (String item : stringArray) {
+			listItems.add(item);
+		}
+		
+		
+		return listItems;
 	}
 	
 	/*
@@ -107,7 +115,7 @@ public class Exercises {
     ** INTERVIEW QUESTION **	 
     
     fizzBuzzList( {1, 2, 3} )  ->  [1, 2, "Fizz"]
-	 fizzBuzzList( {4, 5, 6} )  ->  [4, "Buzz", 6]
+	 fizzBuzzList( {4, 5, 6} )  ->  [4, "Buzz", "Fizz"]
 	 fizzBuzzList( {7, 8, 9, 10, 11, 12, 13, 14, 15} )  ->  [7, 8, "Fizz", "Buzz", 11, "Fizz", 13, 14, "FizzBuzz"]
 	 
 	 HINT: To convert an integer x to a string you can call x.toString() in your code (e.g. if x = 1 then x.ToString() equals "1")
@@ -137,7 +145,39 @@ public class Exercises {
 	 boardingGate( [0, -1, 44, 31, 17, 7, 27, 16, 26, 6] ) -> [7, 6, 17, 16, 27, 26]
 	 */
 	public List<Integer> boardingGate(List<Integer> seatNumberList) {
-		return null;
+		
+		Queue<Integer> one = new LinkedList<Integer>();
+		Queue<Integer> two = new LinkedList<Integer>();
+		Queue<Integer> three = new LinkedList<Integer>();
+		
+		List<Integer> retList = new ArrayList<Integer>();
+		
+		for (Integer seat : seatNumberList) {
+			if (seat > 0 && seat <= 10) {
+				one.add(seat);
+			} 
+			if (seat > 10 && seat <= 20) {
+				two.add(seat);
+			} 
+			if (seat > 20 && seat <= 30) {
+				three.add(seat);
+			}
+		}
+		
+		while (!one.isEmpty()) {
+			retList.add(one.poll());
+		}
+		
+		while (!two.isEmpty()) {
+			retList.add(two.poll());
+		}
+		
+		while (!three.isEmpty()) {
+			retList.add(three.poll());
+		}
+		
+		
+		return retList;
 	}
 
 }
