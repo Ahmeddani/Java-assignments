@@ -10,11 +10,11 @@ This application is a Spring MVC Application. It was built using the following l
 
 ### jQuery
 
-jQuery is a Javscript library used to simplify JavaScript commands interacting with the DOM (document object model). We have shorthand ways to:
+jQuery is a JavaScript library used to simplify JavaScript commands interacting with the DOM (document object model). We have shorthand ways to:
 
 - traverse the DOM and manipulate it
 - bind events to DOM objects
-- asynchronously invoke webservice methods using AJAX
+- asynchronously invoke web service methods using AJAX
 - and more
 
 [jQuery Github](https://github.com/jquery/jquery)
@@ -33,7 +33,7 @@ Spring Framework's support for WebSocket-style messaging in web applications inc
 
 ### STOMP Over WebSocket
 
-STOMP is a simple text-oriented message protocol running on WebSocket. The library is a limited implemention of STOMP!!! You have been warned.
+STOMP is a simple text-oriented message protocol running on WebSocket. The library is a limited implementation of STOMP!!! You have been warned.
 
 [STOMP](http://jmesnil.net/stomp-websocket/doc/)
 
