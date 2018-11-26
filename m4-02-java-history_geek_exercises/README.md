@@ -75,8 +75,30 @@ Make the Game more interactive by supporting various events to respond to user i
 Add in Client-Side Validation to the following pages on the site:
 
 1. Registration form
+	- All fields are required
+	- Email address must be a valid email address format
+	- Email address must be a .gov address
+	- Password must be at least 8 characters
+	- Confirm password must match password
 2. Login form
+	- Email is required
+	- Password is required
 3. Order Checkout form
+	- Billing address is required
+	- Billing city is required
+	- Billing state is required
+	- Billing postal code is required
+	- Shipping address is required
+	- Shipping city is required
+	- Shipping state is required
+	- Shipping postal code is required
+	- Shipping Method must be selected
+	- Credit card name is required
+	- Credit card number is required
+	- Credit card number must be a valid credit card format
+	- Credit card expiration date is required
+	- Credit card expiration date must not be expired
+	- A summary of all validation errors should be displayed
 
 ![Validation](etc/validation.gif)
 
