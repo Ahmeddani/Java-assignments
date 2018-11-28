@@ -65,7 +65,7 @@ Update the Shopping Cart checkout feature.
 
 Make the Game more interactive by supporting various events to respond to user interaction.
 
-1. Bind to the keydown event and listen for left, right, up and down keys to move the ship.
+1. Bind to the key-down event and listen for left, right, up and down keys to move the ship.
 2. Bind the restart button to a click to reset the status of the game board.
 
 ![Game Board](etc/event-handling-game.gif)

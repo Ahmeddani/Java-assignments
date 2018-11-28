@@ -14,15 +14,22 @@ $(document).ready(function () {
 				$('#ShippingPostalCode').val($('#BillingPostalCode').val())
 		    }
 		});
-	var grandTotalPrice = $('#grandtotal span').text();
 	
+	 var grandTotalPrice = $('#grandtotal span').text();
 	 $("input[type='radio']").on('change', function(){
-		 var grandTotal = parseFloat(grandTotalPrice.substring(1));
-		 if (this.checked == true){
-		 var radioValue = $('input[name="ShippingType"]:checked').attr('data-cost');
-	     var newTotal = parseFloat(radioValue) + grandTotal;
-	     $('#grandtotal span').html('$' + newTotal);
+				 var grandTotal = parseFloat(grandTotalPrice.substring(1));
+				 if (this.checked == true){
+				 var radioValue = $('input[name="ShippingType"]:checked').attr('data-cost');
+			     var newTotal = parseFloat(radioValue) + grandTotal;
+			     $('#grandtotal span').html('$' + newTotal);
+		 }	 
+});
+	 
+	 $('.ship').keydown(function(event){
+		 if (event.which == 40){
+			 currentCell.removeClass('ship');
 		 }
-		 
+	 });
 });
-});
+
+

@@ -8,8 +8,8 @@
 
     <table id="gameboard">
     
-		<c:forEach var="row" begin="0" end="${gridSize - 1}">
-			<tr id="row_${row}" class="gamerow">
+		<c:forEach var = "row" begin="0" end="${gridSize - 1}">
+			<tr id ="row_${row}" class="gamerow">
 				<c:forEach var="column" begin="0" end="${gridSize - 1}">
 					<c:set var="cellID" value="row_${row}_column_${column}" />
 					<c:set var="ceLLClass" value="gamecell" />
