@@ -1,6 +1,15 @@
 # Twitter Bootstrap Exercise
 
-For this exercise, you will need to create a responsive site using the Twitter Bootstrap framework. The following are things that you might want to keep in mind as you approach this exercise:
+For this exercise, you will need to create a responsive site using the Twitter Bootstrap framework. Your mission will be to change the HTML file so the site is displayed on the desktop and the web as specified in the images.
+
+## Desktop Version
+![Desktop][site-desktop-version]
+
+## Mobile Version
+![Mobile][site-mobile-version]
+
+## Tips
+The following are some things that you might want to keep in mind as you approach this exercise:
 
 * You will need to include references to the following:
     * **Bootstrap 3.3 (CSS)** - This will be used for the foundational CSS that is used by the site. See the [documentation][bootstrap-getting-started] for more information on loading the library in your page.
@@ -23,3 +32,5 @@ For this exercise, you will need to create a responsive site using the Twitter B
 [font-awesome-icon-gallery]: https://fontawesome.com/icons?d=gallery
 [font-awesome-icon-sizing]: https://fontawesome.com/how-to-use/on-the-web/styling/sizing-icons
 [respond-js-documentation]: https://responsivedesign.is/resources/javascript-jquery/respond-js/
+[site-desktop-version]: exercise-1/max-site-screenshot.png "Desktop Version"
+[site-mobile-version]: exercise-1/min-site-screenshot.png "Mobile Version"
