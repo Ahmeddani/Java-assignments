@@ -118,6 +118,9 @@ header {
         color: #FFF;
     }
 
+h1{
+	color:green;
+}
 .error{
 	color: red;
 }

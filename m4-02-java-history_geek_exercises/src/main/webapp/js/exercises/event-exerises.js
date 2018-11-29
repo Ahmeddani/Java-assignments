@@ -25,11 +25,102 @@ $(document).ready(function () {
 		 }	 
 });
 	 
-	 $('.ship').keydown(function(event){
-		 if (event.which == 40){
-			 currentCell.removeClass('ship');
-		 }
+	 $(document).keydown(function(e) {
+		    switch(e.which) {
+		        case 37: // left
+		        	$('.ship').prev().addClass('ship')
+		        	$('.ship').next().removeClass('ship')
+		        	
+		        	if ($('.ship').hasClass('treasure')){
+		        		 winGame();
+		        	 }
+		        	if ($('.ship').hasClass('iceberg')){
+		        		$('.iceberg').removeClass('ship')
+		        		$('#row_0_column_0').addClass('ship')
+		        	}
+		        	if ($('.ship').hasClass('pirate')) {
+		        		gameOver();
+		        	}
+		        	 
+		        break;
+
+		        case 38: // up
+		        	var downCell = $('.ship').closest('tr').prev().children().eq($('.ship').index())
+		        	if (downCell.length > 0){
+		        	$('.ship').removeClass('ship')
+		        	  downCell.addClass('ship')
+		        	}
+		        	
+		        	if ($('.ship').hasClass('treasure')){
+		        		 winGame();
+		        	 }
+		        	  if ($('.ship').hasClass('iceberg')){
+			        		$('.iceberg').removeClass('ship')
+			        		$('#row_0_column_0').addClass('ship')
+			        	}    
+		        	  if ($('.ship').hasClass('pirate')) {
+			        		gameOver();
+			        	}
+		        	  
+		        break;
+
+		        case 39: // right
+		        	$('.ship').next().addClass('ship')
+		        	$('.ship').prev().removeClass('ship')
+		        	
+		        	if ($('.ship').hasClass('treasure')){
+		        		 winGame();
+		        	 }
+		        	if ($('.ship').hasClass('iceberg')){
+		        		$('.iceberg').removeClass('ship')
+		        		$('#row_0_column_0').addClass('ship')
+		        	}
+		        	if ($('.ship').hasClass('pirate')) {
+		        		gameOver();
+		        	}
+		        	
+		        break;
+
+		        case 40: // down
+		        	
+		        	var downCell = $('.ship').closest('tr').next().children().eq($('.ship').index())
+		        	if (downCell.length > 0){
+		        	$('.ship').removeClass('ship')
+		        	  downCell.addClass('ship')
+		        	}
+		        	 if ($('.ship').hasClass('treasure')){
+			        		 winGame();
+			        	 }
+		        	  if ($('.ship').hasClass('iceberg')){
+			        		$('.iceberg').removeClass('ship')
+			        		$('#row_0_column_0').addClass('ship')
+			        	}    	
+		        	  if ($('.ship').hasClass('pirate')) {
+			        		gameOver();
+			        	}
+		        	 
+		        	  
+		        break;
+
+		        default: return; // exit this handler for other keys
+		    }
+		    e.preventDefault(); // prevent the default action (scroll / move caret)
+		});
+	 $('#btnRestart').click(function(){
+		 $('h1').remove();
 	 });
+	 
+	 const winGame = function(){
+     		$('h2').after("<h1>YOU WON THE TREASURE!!!</h1>")
+     		$('.ship').removeClass('ship')
+     		$('#row_0_column_0').addClass('ship')
+	 }
+	 
+	 const gameOver = function(){
+		 $('h2').after("<h1>GAME OVER!!!</h1>")
+ 		$('.ship').removeClass('ship')
+ 		$('#row_0_column_0').addClass('ship')
+	 }
 });
 
 
