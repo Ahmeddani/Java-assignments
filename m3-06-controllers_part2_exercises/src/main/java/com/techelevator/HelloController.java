@@ -36,11 +36,10 @@ public class HelloController {
 		return "newReviewForm";
 	}
 	
-	@RequestMapping(path="/reviewOutput", method=RequestMethod.POST)
-	public String addNewCityByPostWithModelMap(Review newReview, @DateTimeFormat(pattern="MM/dd/yyyy")@RequestParam LocalDateTime date, ModelMap map) {
+	@RequestMapping(path="/newReviewForm", method=RequestMethod.POST)
+	public String addNewReviewWithModelMap(Review newReview, ModelMap map) {
 	    
-//		map.addAttribute("methodUsed", "POST-REDIRECT-GET");
-//		LocalDateTime date = LocalDateTime.now();
+		LocalDateTime date = LocalDateTime.now();
 		
 		
 		newReview.setDateSubmitted(date.now());

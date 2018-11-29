@@ -2,7 +2,7 @@
 <c:import url="/WEB-INF/jsp/common/header.jsp"/>
 
 <section>
-<c:url value = "/reviewOutput" var = "formAction"/>
+<c:url value = "/newReviewForm" var = "formAction"/>
 <form action="${formAction }" method = "POST">
 <div class = "formInput">
 <h3 style = "text-align:center">New Dummy review</h3>
