@@ -26,7 +26,7 @@ public class ActorSearchController {
 
 	/* What request mapping do we want here */
 
-	@RequestMapping("/actorSearch")
+	@RequestMapping(path = "/")
 
 	public String showSearchActorForm() {
 		return "actorList";
@@ -34,7 +34,7 @@ public class ActorSearchController {
 
 	/* What about here? */
 
-	@RequestMapping("/actorSearch")
+	@RequestMapping("/actorList")
 	public String searchActors(HttpServletRequest request) {
 		String lastName = request.getParameter("lastName");
 		request.setAttribute("actors", actorDao.getMatchingActors(lastName));

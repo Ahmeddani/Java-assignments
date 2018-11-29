@@ -150,32 +150,34 @@ $(document).ready(function () {
 			}
 			
 	});
-	$.validator.addMethod('cardFormat', function(value, index){
-		return (value.substring(0,4).length == 4) && (value.substring(4,8).length == 4) && (value.substring(8,12).length == 4) && (value.substring(12).length == 4)
+		$.validator.addMethod('cardFormat', function(value, index){
+				return (value.substring(0,4).length == 4) && (value.substring(4,8).length == 4) && (value.substring(8,12).length == 4) && (value.substring(12).length == 4)
+				
+			}, "Please enter a valid credit card");
 		
-	}, "Please enter a valid credit card");
-	
-	$.validator.addMethod("govEmail", function(value, index) {
-	    return value === "" || 
-	        value.toLowerCase().endsWith("@gov.com");  // it would be safer to consider a regex here. 
-	}, "Please enter a gov.com email");
-	
-	$.validator.addMethod("cardNotExpired", function(value, index) {
+		$.validator.addMethod("govEmail", function(value, index) {
+			    return value === "" || 
+			        value.toLowerCase().endsWith("@gov.com");  // it would be safer to consider a regex here. 
+			}, "Please enter a gov.com email");
 		
-		var today = new Date();
-		var dd = today.getDate();
-		var mm = today.getMonth()+1; //January is 0!
-		var yyyy = today.getFullYear().toString().slice(2);
+		$.validator.addMethod("cardNotExpired", function(value, index) {
+			
+			var today = new Date();
+			var dd = today.getDate();
+			var mm = today.getMonth()+1; //January is 0!
+			var yyyy = today.getFullYear().toString().slice(2);
+			
+			var cardYear = parseInt(value.substring(3));
+			var cardMonth = parseInt(value.substring(0,2));
+		    return (yyyy < cardYear || (yyyy == cardYear && mm <= cardMonth && cardMonth <= 12));
+		        
+		}, "Card Expired! Please try another credit card");
+	
+		$.validator.addMethod('dateFormat', function(value, index){
 		
-		var cardYear = parseInt(value.substring(3));
-		var cardMonth = parseInt(value.substring(0,2));
-	    return (yyyy < cardYear || (yyyy == cardYear && mm <= cardMonth && cardMonth <= 12));
-	        
-	}, "Card Expired! Please try another credit card");
-
-$.validator.addMethod('dateFormat', function(value, index){
+			return value.match(/^\d{1,2}\/\d{2}$/);
+		}, "Please enter a valid date format (mm/yy)");
 	
-	return value.match(/^\d{1,2}\/\d{2}$/);
-}, "Please enter a valid date format (mm/yy)")
-	
+		
+		
 });

@@ -5,7 +5,7 @@
 <%@include file="common/header.jspf"%>
 <!-- Form goes here -->
 
-<c:url value = "/actorSearch" var = "formAction"/>
+<c:url value = "/actorList" var = "formAction"/>
 <form action = "${formAction}" method = "GET">
 <input type = "text" name = "lastName" id = "lastName"/>
 
@@ -19,9 +19,6 @@
 </tr>
 <c:forEach items="${actors}" var="actor">
 <tr>
-
-<td>${actor.firstName}</td>
-<td>${actor.lastName }</td>
     <!-- What do we print here for each actor? -->
     <td><c:out value="${actor.firstName}" /> <c:out value="${actor.lastName}" /></td>
 </tr>
