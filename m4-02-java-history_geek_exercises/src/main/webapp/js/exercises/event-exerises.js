@@ -19,9 +19,11 @@ $(document).ready(function () {
 	 $("input[type='radio']").on('change', function(){
 				 var grandTotal = parseFloat(grandTotalPrice.substring(1));
 				 if (this.checked == true){
+				 var tax =  parseFloat($('#tax span.price').text().substring(1));
 				 var radioValue = $('input[name="ShippingType"]:checked').attr('data-cost');
-			     var newTotal = parseFloat(radioValue) + grandTotal;
-			     $('#grandtotal span').html('$' + newTotal);
+				 $('#shipping span.price').text('$' + radioValue);
+			     var newTotal = parseFloat(radioValue) + tax + grandTotal;
+			     $('#grandtotal span').html('$' + newTotal.toFixed(2));
 		 }	 
 });
 	 
