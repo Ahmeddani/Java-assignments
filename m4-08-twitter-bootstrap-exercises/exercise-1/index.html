@@ -10,9 +10,56 @@
       <!--[if (lt IE 9) & (!IEMobile)]>
         <script src="js/vendor/respond.min.js"></script>
       <![endif]-->
+      
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel = "stylesheet", href = "techCss.css">
     </head>
     <body>
-      <header>
+      <header>                
+
+                <nav class="navbar navbar-default navbar-static-top" role="navigation">
+                    <div class="container">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                      <span class="sr-only">Toggle navigation</span>
+                                      <span class="icon-bar"></span>
+                                      <span class="icon-bar"></span>
+                                      <span class="icon-bar"></span>                                 
+                                  </button>                                
+                      </div>
+                      <!-- Collect the nav links, forms, and other content for toggling -->
+                      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                          <li><a href="index.php">Home</a></li>
+                          <li><a href="about.php">About</a></li>
+                          <li><a href="#portfolio">Portfolio</a></li>
+                          <li><a href="#">Blog</a></li>
+                          <li><a href="contact.php">Contact</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+
+                  <div class="jumbotron banner">
+                      <h1 class="display-4" style = "color:white">Big Welcome Message</h1>
+                      <p class="lead" style = "color:white">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo.</p>
+                      <!-- <hr class="my-4"> -->
+                      <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                      </p>
+                    </div>
+
+                <div class="carousel-inner" role="listbox">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" data-src="holder.js/900x300?auto=yes&bg=777&fg=555&text=First slide" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Big Welcome Message</h1>
+                        <p>Ingenious marketing copy. And some more ingenious marketing copy.<a href="#features">Learn more</a></p>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
         <img src="img/te_logo.png" alt="Tech Elevator" width="120">
         <ul>
           <li><a href="#welcome">Welcome</a></li>
@@ -22,8 +69,20 @@
         </ul>
       </header>
 
-      <h1>Big Welcome Message</h1>
-      <p>Ingenious marketing copy. And some more ingenious marketing copy.<a href="#features">Learn more</a></p>
+      <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              One of three columns
+            </div>
+            <div class="col-sm">
+              One of three columns
+            </div>
+            <div class="col-sm">
+              One of three columns
+            </div>
+          </div>
+        </div>
+      
 
       <!-- FEATURES SECTION -->
       <section id="features">
